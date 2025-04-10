@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>G.L.O.S.S. – Global Language Organization & Shade System</title>
   <style>
     body {
       font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background-color: #770000;
+      color: white;
+      padding: 1rem;
       text-align: center;
-      background-color: #f5f5f5;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
       padding: 2rem;
-      color: #333;
+      gap: 2rem;
     }
-    h1 {
-      color: #990000;
-      font-size: 2.5rem;
+    .sidebar {
+      flex: 1;
+      max-width: 500px;
     }
-    p {
-      max-width: 700px;
-      margin: 0 auto 1rem auto;
-      font-size: 1.1rem;
+    .content {
+      flex: 2;
     }
-    .link-button {
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .spreadsheet-link {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #990000;
+      padding: 0.5rem 1rem;
+      background-color: #770000;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.2s ease;
+      border-radius: 4px;
     }
-    .link-button:hover {
-      background-color: #bb0000;
+    .spreadsheet-link:hover {
+      background-color: #550000;
     }
   </style>
 </head>
 <body>
-
-  <h1>G.L.O.S.S.</h1>
-  <p><strong>Global Language Organization & Shade System</strong></p>
-  <p>A worldwide color-coded system for mapping languages and dialects as they existed around 1850–1900.
-     Includes historical varieties, colonial offshoots, and dialect groupings organized by linguistic family.</p>
-
-  <a class="link-button" href="https://docs.google.com/spreadsheets/d/1dj3BinuzsgwDTVaSsxI45dseTnbQ8n5M6Ugm7aI1uEg" target="_blank">
-    🔗 View Interactive Language Spreadsheet
-  </a>
-
+  <header>
+    <h1>G.L.O.S.S.</h1>
+    <p>Global Language Organization & Shade System – a visual and searchable guide to world languages, c. 1850–1900</p>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Language Colour Scheme</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRANDOMEXAMPLELINK/pubhtml?widget=true&amp;headers=false"></iframe>
+      <a class="spreadsheet-link" href="https://docs.google.com/spreadsheets/d/1dj3BinuzsgwDTVaSsxI45dseTnbQ8n5M6Ugm7aI1uEg" target="_blank">Open Full Spreadsheet</a>
+    </div>
+    <div class="content">
+      <h2>G.L.O.S.S. Language Map</h2>
+      <img src="GLOSS-img.png" alt="G.L.O.S.S. Language Map" />
+    </div>
+  </main>
 </body>
 </html>
