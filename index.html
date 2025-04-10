@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,8 +73,21 @@
 
   <main>
     <h2>Language Map</h2>
-    <img src="GLOSS-img.png" style="max-width: 100%; height: auto; cursor: zoom-in;" />
+    <div id="zoom-container" style="width: 100%; overflow: hidden; border: 1px solid #ccc;">
+     <img id="zoom-img" src="GLOSS-img.png" alt="GLOSS Map" style="width: 100%; height: auto;">
+    </div>
   </main>
+  
+<script>
+  const elem = document.getElementById('zoom-img');
+  const panzoom = Panzoom(elem, {
+    maxScale: 5,
+    minScale: 1,
+    contain: 'outside'
+  });
+
+  elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+</script>
 
 </body>
 </html>
