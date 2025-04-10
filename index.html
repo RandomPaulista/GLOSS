@@ -53,6 +53,7 @@
       overflow: hidden;
       border: 1px solid #ccc;
       max-width: 1200px;
+      height: 80vh;
     }
 
     #zoom-img {
@@ -60,6 +61,7 @@
       height: auto;
       cursor: grab;
       user-select: none;
+      touch-action: none;
     }
 
     a {
@@ -86,8 +88,8 @@
     </div>
   </div>
 
-  <!-- Panzoom Library -->
-  <script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+  <!-- ✅ Panzoom Library from jsDelivr CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
   <script>
     const image = document.getElementById('zoom-img');
     const panzoom = Panzoom(image, {
@@ -95,7 +97,9 @@
       minScale: 1,
       contain: 'outside'
     });
-    image.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+
+    const parent = image.parentElement;
+    parent.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
   </script>
 
 </body>
