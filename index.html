@@ -82,20 +82,36 @@
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQs7-xaN2lM81fdWZY5TaTa1_J2scAuL-fasr0ERl10grGIWijcbhD4zQYXqqIdW1iQQKDXS105KHW1/pubhtml?widget=true&amp;headers=false"></iframe>
   </div>
 
-  <div id="main">
-    <div id="zoom-container">
-      <img id="zoom-img" src="GLOSS-img.png" alt="GLOSS Language Map">
-    </div>
+  <div style="text-align: center;">
+  <div id="panzoom-container" style="width: 100%; overflow: hidden; border: 1px solid #ccc;">
+    <img id="zoom-img" src="GLOSS-img.png" style="max-width: none; width: 1000px;" />
   </div>
 
-  <!-- ✅ Panzoom Library from jsDelivr CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
-  <script>
-    const image = document.getElementById('zoom-img');
-    const panzoom = Panzoom(image, {
-      maxScale: 6,
-      minScale: 1
-    });
+  <div style="margin-top: 10px;">
+    <button onclick="panzoom.zoomIn()">Zoom In</button>
+    <button onclick="panzoom.zoomOut()">Zoom Out</button>
+    <button onclick="panzoom.reset()">Reset</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+<script>
+  const container = document.getElementById('panzoom-container');
+  const image = document.getElementById('zoom-img');
+
+  const panzoom = Panzoom(image, {
+    maxScale: 6,
+    minScale: 1,
+    startScale: 1,
+    contain: 'outside', // You can remove this if you want infinite panning
+  });
+
+  container.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
+
+  // Expose panzoom globally for button use
+  window.panzoom = panzoom;
+</script>
+
 
     const parent = image.parentElement;
     parent.addEventListener('wheel', panzoom.zoomWithWheel, { passive: false });
