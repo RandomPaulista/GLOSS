@@ -3,163 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>G.L.O.S.S. – Global Language Organization & Shade System</title>
-  <meta name="description" content="A visual and searchable reference system for the world’s languages, centered on color-coded historical groupings in the late 19th century. Click, scroll, or zoom to explore.">
-
-  <style>
-    :root {
-      --bg: #111;
-      --panel: #1c1c1c;
-      --text: #eee;
-      --muted: #999;
-      --accent: #00cccc;
-      --border: #333;
-      --highlight: #009999;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: var(--highlight);
-      color: #fff;
-      padding: 1.5rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 0.5px;
-    }
-
-    .description {
-      text-align: center;
-      padding: 1rem;
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .sidebar, .main {
-      flex: 1 1 400px;
-      background: var(--panel);
-      padding: 1rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 6px;
-      background-color: #000;
-    }
-
-    #scroll-container {
-      overflow: auto;
-      max-height: 600px;
-      background-color: #000;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .main img {
-      width: 100%;
-      max-width: none;
-      border-radius: 6px;
-    }
-
-    .zoom-note {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-
-    .tooltip-area {
-      margin-top: 2rem;
-      padding: 1rem;
-      font-size: 0.95rem;
-      background: #0f2e2d;
-      border-left: 4px solid var(--accent);
-      color: var(--accent);
-      border-radius: 4px;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      header h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>G.L.O.S.S. – Global Language Organization & Shade System</h1>
-  </header>
-
+  <h1>G.L.O.S.S. – Global Language Organization & Shade System</h1>
   <p class="description">
-    A visual and searchable reference system for the world’s languages, centered on color-coded historical groupings in the late 19th century. Click, scroll, or zoom to explore.
+    A visual and searchable reference system for the world’s languages, centered on color-coded historical groupings in the late 19th century.
   </p>
 
-  <div class="container">
-    <div class="sidebar">
-      <h2>Spreadsheet</h2>
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQs7-xaN2lM81fdWZY5TaTa1_J2scAuL-fasr0ERl10grGIWijcbhD4zQYXqqIdW1iQQKDXS105KHW1/pubhtml?widget=true&amp;headers=false"></iframe>
-      <p><a href="https://docs.google.com/spreadsheets/d/1dj3BinuzsgwDTVaSsxI45dseTnbQ8n5M6Ugm7aI1uEg/edit" target="_blank">Open Spreadsheet in New Tab</a></p>
-    </div>
-
-    <div class="main">
-      <h2>Language Map</h2>
-      <div id="scroll-container">
-        <img id="map-img" src="GLOSS-img.png" alt="GLOSS Map">
-      </div>
-      <div class="zoom-note">Tip: Use <strong>Ctrl + scroll</strong> or pinch to zoom in/out</div>
-
-      <div class="tooltip-area">
-        <strong>Tooltips Area (Placeholder):</strong><br>
-        Hover-over language codes will appear here dynamically in the future.
-      </div>
-    </div>
+  <div class="map-wrapper">
+    <img src="GLOSS-img.png" alt="GLOSS Map" class="map-base">
+    
+    <!-- Example Hover Points (you can copy/adjust for others) -->
+    <div class="hover-point" style="top: 42%; left: 38%; background-color: #00ccdd;" title="Central German"></div>
+    <div class="hover-point" style="top: 45%; left: 34%; background-color: #00ff99;" title="English"></div>
+    <div class="hover-point" style="top: 46%; left: 31%; background-color: #22ff88;" title="Scots"></div>
+    <div class="hover-point" style="top: 41%; left: 37%; background-color: #dd4444;" title="Spanish"></div>
+    <!-- Add more as needed -->
   </div>
 </body>
 </html>
