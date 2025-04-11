@@ -1,0 +1,52 @@
+<!-- click-to-place.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>G.L.O.S.S. Dot Placement Tool</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      cursor: crosshair;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-family: monospace;
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click to Get Dot Position</h1>
+  <p>Click anywhere on the map to generate a dot’s <code>top</code> and <code>left</code> % values.</p>
+  <img id="map" src="images/GLOSS-img.png" alt="Map" />
+
+  <div class="output" id="coords"></div>
+
+  <script>
+    const map = document.getElementById("map");
+    const coords = document.getElementById("coords");
+
+    map.addEventListener("click", function (e) {
+      const rect = map.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(2);
+      const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(2);
+      coords.innerHTML = `<div>top: ${y}%; left: ${x}%;</div>`;
+    });
+  </script>
+</body>
+</html>
