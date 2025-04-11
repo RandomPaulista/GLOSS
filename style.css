@@ -1,0 +1,59 @@
+:root {
+  --bg: #111;
+  --text: #eee;
+  --accent: #00ccdd;
+  --panel: #1c1c1c;
+  --border: #444;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2em;
+}
+
+.map-wrapper {
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--border);
+  background-color: var(--panel);
+  max-width: 100%;
+  overflow: auto;
+}
+
+.map-base {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+}
+
+.hover-point {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: help;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hover-point:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  z-index: 10;
+}
