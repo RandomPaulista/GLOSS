@@ -64,3 +64,23 @@ th, td {
   border-radius: 4px;
   border: 1px solid #666;
 }
+
+.region-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.region-links li {
+  margin: 10px 0;
+}
+
+.region-links a {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.region-links a:hover {
+  text-decoration: underline;
+}
