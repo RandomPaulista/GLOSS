@@ -1,51 +1,86 @@
-<!-- click-to-place.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>G.L.O.S.S. Dot Placement Tool</title>
   <style>
     body {
       background: #111;
       color: #eee;
-      font-family: sans-serif;
+      font-family: 'Arial', sans-serif;
       text-align: center;
       padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
     }
 
     img {
       max-width: 100%;
       height: auto;
-      display: block;
-      margin: 0 auto;
       cursor: crosshair;
+      border: 2px solid #333;
+      border-radius: 8px;
     }
 
     .output {
       margin-top: 20px;
       font-family: monospace;
       background: #222;
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
+      display: inline-block;
+      white-space: pre-wrap;
+      user-select: all;
+    }
+
+    .dot-preview {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid white;
+      pointer-events: none;
+    }
+
+    .map-wrapper {
+      position: relative;
       display: inline-block;
     }
   </style>
 </head>
 <body>
-  <h1>Click to Get Dot Position</h1>
-  <p>Click anywhere on the map to generate a dot’s <code>top</code> and <code>left</code> % values.</p>
-  <img id="map" src="images/GLOSS-img.png" alt="Map" />
+  <h1>Dot Position Tool</h1>
+  <p>Click the map to generate a <code>.hover-point</code> with coordinates.</p>
 
-  <div class="output" id="coords"></div>
+  <div class="map-wrapper">
+    <img id="map" src="images/GLOSS-img.png" alt="Map" />
+    <div id="dot" class="dot-preview" style="display:none;"></div>
+  </div>
+
+  <div class="output" id="coords">Click the map to generate output</div>
 
   <script>
     const map = document.getElementById("map");
     const coords = document.getElementById("coords");
+    const dot = document.getElementById("dot");
+    const wrapper = document.querySelector(".map-wrapper");
 
     map.addEventListener("click", function (e) {
       const rect = map.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(2);
       const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(2);
-      coords.innerHTML = `<div>top: ${y}%; left: ${x}%;</div>`;
+
+      const output = `
+<div class="hover-point" style="top: ${y}%; left: ${x}%; background-color: #00aaaa;" title="Language Name"></div>`.trim();
+
+      coords.textContent = output;
+
+      // Move the preview dot
+      dot.style.display = 'block';
+      dot.style.top = `${y}%`;
+      dot.style.left = `${x}%`;
     });
   </script>
 </body>
