@@ -65,3 +65,7 @@ Wakhi–Sarikoli	#aa9966
 Ishkashimi–Sanglichi	#bbaa77
 Yidgha–Munji	#ccbb88
 Pashto	#ddcc99
+Greek	#774477
+Albanian	#773300
+Basque	#aaff00
+Armenian	#882200
