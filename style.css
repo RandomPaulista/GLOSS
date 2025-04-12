@@ -25,15 +25,14 @@ a {
 
 .map-wrapper {
   position: relative;
-  display: inline-block;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
 }
 
 #map-img {
-  display: block;
-  width: 100%;
-  height: auto;
+  width: 1200px;
+  height: 813px;
 }
 
 .hover-point {
