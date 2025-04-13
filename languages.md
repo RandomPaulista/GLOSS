@@ -21,8 +21,6 @@ Neapolitan	#bb0055
 Sicilian	#aa0055
 Sardinian	#990055
 Romanian	#880055
-Aromanian	#770055
-Meglenetic	#660055
 Faroese	#005555
 Icelandic	#007777
 Norwegian	#009999
@@ -49,6 +47,10 @@ Sorbian	#5544dd
 Ukrainian	#6655ee
 Belarusian	#7766ff
 Russian	#8877ff
+Aukštatian	#aa00aa
+Samogitian	#bb00bb
+Latvian	#cc00cc
+Latgalian	#dd00dd
 Western Caspian	#665500
 Eastern Caspian	#887700
 Kurmanji–Sorani	#ccaa55
@@ -69,3 +71,19 @@ Greek	#774477
 Albanian	#773300
 Basque	#aaff00
 Armenian	#882200
+Finnish	#336677
+Karelian	#447788
+Ingrian	#335566
+Estonian	#558899
+Livonian	#99bbcc
+Sámi	#224455
+Mari	#445566
+Mordvin	#556677
+Komi	#667788
+Udmurt	#778899
+Hungarian	#446688
+Khanty	#334455
+Mansi	#223344
+Nenets	#aaccee
+Selkup	#99aabb
+Nganasan	#8899aa
