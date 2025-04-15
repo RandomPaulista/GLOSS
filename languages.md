@@ -118,8 +118,10 @@ Kyrgyz	#00CCFF
 Chuvash	#00BBCC
 Uzbek	#AA55FF
 Uyghur	#BB66FF
-Khakas	#5500AA
-Altay	#6600BB
-Tuvan	#7700CC
-Yakut	#8800DD
-Dolgan	#9900EE
+Khakas	#5500AA	
+Shor	#6600BB	
+Altay	#7700CC	
+Tuvan	#8800DD	
+Tofa	#8800EE	
+Yakut	#9900EE	
+Dolgan	#AA00FF	
