@@ -1,5 +1,5 @@
-Name	Hex Code
-Galician-Portuguese	#550000
+Portuguese	#330000
+Galician	#550000
 Astur-Leonese	#770000
 Castilian	#990000
 Aragonese	#bb0000
@@ -14,59 +14,66 @@ Ligurian	#ff3399
 Piedmontese	#ff44aa
 Lombard	#ff55bb
 Emilian-Romagnol	#ff66cc
-Venetian	#ff77dd
+Lucano-Lombard	#ff77dd
+Siculo-Lombard	#ff88ee
+Venetian	#ff99ff
+Istriot	#dd2277
 Tuscan-Corsican	#ee0055
 Central Italian	#cc0055
 Neapolitan	#bb0055
 Sicilian	#aa0055
 Sardinian	#990055
 Romanian	#880055
-Faroese	#005555
-Icelandic	#007777
-Norwegian	#009999
-Swedish	#00bbbb
-Danish	#00cccc
+Aromanian	#770055
+Meglenitic	#660055
+Istro-Romanian	#550055
+Faroese	#7700bb
+Icelandic	#6600aa
+North Norwegian	#551199
+Trønder	#442288
+Westlandic	#333377
+Eastlandic	#224466
+Norrlandic	#115566
+East Swedish	#006677
+Svealandic	#007788
+Götalandic	#008899
+Gutnish	#0099aa
+South Swedish	#00aaaa
+Scanian-Bornholmian	#00bbbb
+Jutlandic	#00bbcc
 Low Saxon	#00dddd
-Central German	#00ccdd
-Upper German	#00bbee
-Dutch	#00aaff
-Frisian	#00ddcc
+Low Franconian	#00ccdd
+Central German	#00bbee
+Upper German	#00aaff
+North Frisian	#00ccee
+East Frisian	#00ddcc
+West Frisian	#00eecc
 English	#00eebb
 Scots	#00ff99
 Irish	#228822
 Scottish Gaelic	#339933
 Welsh	#44aa44
 Breton	#55bb55
-Kajkavian	#001177
-Chakavian	#001188
-Shtokavian	#001199
-Bulgarian	#2211aa
-Polish	#3322bb
-Czech-Slovak	#4433cc
-Sorbian	#5544dd
-Ukrainian	#6655ee
-Belarusian	#7766ff
-Russian	#8877ff
+Slovene	#006600
+Kajkavian	#007700
+Chakavian	#008800
+Shtokavian	#009900
+Torlakian	#00aa00
+Bulgarian	#00bb00
+Pomeranian	#00cc00
+Polish	#00dd00
+Czech	#99ee00
+Slovak	#aaff66
+Lower Sorbian	#bbff66
+Upper Sorbian	#ccff66
+(Carpatho-)Rusyn	#00ee55
+Ukrainian	#00ee66
+Belarusian	#00ee77
+Russian	#00ee88
 Aukštatian	#aa00aa
 Samogitian	#bb00bb
 Latvian	#cc00cc
 Latgalian	#dd00dd
-Western Caspian	#665500
-Eastern Caspian	#887700
-Kurmanji–Sorani	#ccaa55
-Xwarin–Laki	#bbaa44
-Zaza–Gorani	#aa9933
-Balochi	#aa8800
-Persian	#bb9955
-Luri-Fars	#ccaa66
-Coastal Persid	#ddbb77
-Ossetian	#886644
-Yaghnobi	#997755
-Yazghulami–Shugni	#998855
-Wakhi–Sarikoli	#aa9966
-Ishkashimi–Sanglichi	#bbaa77
-Yidgha–Munji	#ccbb88
-Pashto	#ddcc99
 Greek	#774477
 Albanian	#773300
 Basque	#aaff00
@@ -98,14 +105,14 @@ Georgian	#779999
 Mingrelian	#77aaaa
 Laz	#77cccc
 Svan	#77dddd
-Osmanli	#FF8800
-Rumelian	#FF9933
-Dobrujan	#FFAA66
+Turkish	#FF9933
 Gagauz	#FFBB99
 Azeri	#FFCC66
 Qashqai	#FFDD77
 Khorasan	#FFEE88
 Turkmen	#FFFF99
+Anatolian Turkmen	#FFFFaa
+Dobrujan Tatar	#00AA66
 Karachay-Balkar	#00AA77
 Kumyk	#00BB88
 Nogai	#00CC99
@@ -115,13 +122,55 @@ Crimean Tatar	#00BB99
 Kazakh	#00FFCC
 Karakalpak	#00EEDD
 Kyrgyz	#00CCFF
-Chuvash	#00BBCC
+Chuvash	#00aaCC
 Uzbek	#AA55FF
 Uyghur	#BB66FF
-Khakas	#5500AA	
-Shor	#6600BB	
-Altay	#7700CC	
-Tuvan	#8800DD	
-Tofa	#8800EE	
-Yakut	#9900EE	
-Dolgan	#AA00FF	
+Khakas	#5500AA
+Shor	#6600BB
+Altay	#7700CC
+Tuvan	#8800DD
+Tofa	#8800EE
+Yakut	#9900EE
+Dolgan	#AA00FF
+Talysh	#332211
+Southern Tati	#553311
+Central Plateau	#774411
+Khurvi-Farvi	#995511
+Sivandi	#bb6611
+Biabanaki	#dd7711
+Gilaki	#ee8811
+Mazandarani	#ee9911
+Tatoid	#eeaa11
+Semnani	#eebb11
+Kurmanji	#eecc11
+Sorani	#eedd11
+Xwarin	#eeee11
+Laki	#ffee11
+Kurdali	#eedd22
+Zaza	#ddcc33
+Gorani	#ccbb44
+Balochi	#bbaa44
+Northern Tat	#aa9955
+Farsi	#998855
+Dari	#887755
+Tajik	#776655
+Hazaragi	#665544
+Aimaq	#554433
+Sistani	#443322
+Luri	#663322
+Khuzi	#773322
+Fars	#883322
+Lari	#993322
+Garmsiri	#aa3322
+Bashkardi	#bb3322
+Kumzari	#cc3322
+Ossetian	#aa4422
+Yaghnobi	#994422
+Yazgulami	#884422
+Shughni	#774422
+Ishkashimi	#664422
+Wakhi	#554422
+Munji	#444422
+Yidgha	#334422
+Pashto	#224422
+Ormuri-Parachi	#114422
